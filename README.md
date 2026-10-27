@@ -1,12 +1,12 @@
-# VLC · valeur lancer-compte
+# PCV · Pitch-Count Value
 
-Site : **<https://julienmiron.github.io/vlc-baseball/>**
+Site: **<https://julienmiron.github.io/vlc-baseball/>**
 
-Statistiques de frappeurs du baseball majeur : valeur produite au-dessus de la
-ligue selon le type de lancer et le compte, décomposée en décision et en
-exécution. Le site est mis à jour chaque semaine pendant la saison.
+Major League batter statistics: value produced above the league by pitch type
+and count, split into decision and execution. The site is updated every week
+during the season.
 
-Ce dépôt ne contient que le site publié (branche `gh-pages`).
+This repository only holds the published site (`gh-pages` branch).
 
-Données : Baseball Savant (MLB Advanced Media). Site indépendant, non affilié
-à la MLB.
+Data: Baseball Savant (MLB Advanced Media). Independent site, not affiliated
+with Major League Baseball.
