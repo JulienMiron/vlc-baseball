@@ -1,0 +1,36 @@
+.lead {
+  color: #52514e;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+.batter-picker {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+.batter-picker select {
+  max-width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #c9c8c2;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+img.card-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e6e5e1;
+  border-radius: 4px;
+}
+
+table.dataTable {
+  font-size: 0.92rem;
+}
+
+.figure-caption {
+  color: #52514e;
+}

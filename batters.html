@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Batter cards – PCV · Pitch-Count Value</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PCV · Pitch-Count Value</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Leaderboard</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./batters.html" aria-current="page"> 
+<span class="menu-text">Batters</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sensitivity.html"> 
+<span class="menu-text">Count sensitivity</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Batter cards</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Each card shows, for one batter, the value produced above the league (runs per 100 pitches) by pitch type and count state, for <strong>decision</strong>, <strong>execution</strong> and total <strong>PCV</strong>. Red: better than the league; blue: worse. The number <em>n</em> is how many pitches the batter saw in the cell; thinly populated cells are pulled toward the batter’s overall level.</p>
+<ul>
+<li><strong>Hitter’s count</strong>: 1-0, 2-0, 3-0, 2-1, 3-1</li>
+<li><strong>Neutral</strong>: 0-0, 0-1, 1-1</li>
+<li><strong>Two strikes</strong>: 0-2, 1-2, 2-2, 3-2</li>
+</ul>
+<div class="column-page">
+<div class="batter-picker">
+<label for="picker">Batter:</label> <select id="picker"> <option value="805999">A.J. Ewing (1,865 pitches)</option> <option value="592450">Aaron Judge (1,188 pitches)</option> <option value="668939">Adley Rutschman (1,670 pitches)</option> <option value="666969">Adolis García (1,060 pitches)</option> <option value="664761">Alec Bohm (2,251 pitches)</option> <option value="676475">Alec Burleson (2,405 pitches)</option> <option value="672386">Alejandro Kirk (1,155 pitches)</option> <option value="608324">Alex Bregman (2,680 pitches)</option> <option value="690976">Alex Freeland (1,057 pitches)</option> <option value="643217">Andrew Benintendi (1,730 pitches)</option> <option value="683734">Andrew Vaughn (1,326 pitches)</option> <option value="655316">Andruw Monasterio (1,442 pitches)</option> <option value="665926">Andrés Giménez (1,772 pitches)</option> <option value="681624">Andy Pages (2,268 pitches)</option> <option value="682657">Angel Martínez (1,410 pitches)</option> <option value="668885">Austin Martin (1,337 pitches)</option> <option value="663586">Austin Riley (2,485 pitches)</option> <option value="669224">Austin Wells (1,542 pitches)</option> <option value="700250">Ben Rice (2,607 pitches)</option> <option value="810938">Ben Williamson (1,080 pitches)</option> <option value="677942">Blaze Alexander (1,047 pitches)</option> <option value="666182">Bo Bichette (2,544 pitches)</option> <option value="677951">Bobby Witt Jr.&nbsp;(2,291 pitches)</option> <option value="695731">Braden Montgomery (1,356 pitches)</option> <option value="691781">Brady House (1,269 pitches)</option> <option value="664040">Brandon Lowe (2,548 pitches)</option> <option value="669016">Brandon Marsh (2,023 pitches)</option> <option value="607043">Brandon Nimmo (2,497 pitches)</option> <option value="678218">Brandon Valenzuela (1,063 pitches)</option> <option value="677587">Brayan Rocchio (2,169 pitches)</option> <option value="683146">Brett Baty (1,827 pitches)</option> <option value="668930">Brice Turang (2,790 pitches)</option> <option value="686797">Brooks Lee (2,278 pitches)</option> <option value="668804">Bryan Reynolds (2,637 pitches)</option> <option value="805811">Bryce Eldridge (1,798 pitches)</option> <option value="547180">Bryce Harper (2,677 pitches)</option> <option value="681082">Bryson Stott (2,430 pitches)</option> <option value="621439">Byron Buxton (1,445 pitches)</option> <option value="682928">CJ Abrams (2,438 pitches)</option> <option value="663728">Cal Raleigh (2,187 pitches)</option> <option value="702332">Caleb Durbin (2,051 pitches)</option> <option value="701358">Cam Smith (2,290 pitches)</option> <option value="666126">Carlos Cortes (1,477 pitches)</option> <option value="665966">Carlos Narváez (1,124 pitches)</option> <option value="701807">Carson Benge (2,607 pitches)</option> <option value="608348">Carson Kelly (1,582 pitches)</option> <option value="695600">Carter Jensen (2,419 pitches)</option> <option value="669477">Casey Schmitt (1,414 pitches)</option> <option value="678882">Ceddanne Rafaela (1,986 pitches)</option> <option value="656775">Cedric Mullins (1,855 pitches)</option> <option value="802415">Chandler Simpson (1,822 pitches)</option> <option value="800050">Chase DeLauter (2,090 pitches)</option> <option value="805367">Chase Meidroth (2,529 pitches)</option> <option value="572233">Christian Walker (2,390 pitches)</option> <option value="592885">Christian Yelich (2,046 pitches)</option> <option value="691723">Coby Mayo (1,851 pitches)</option> <option value="641355">Cody Bellinger (2,034 pitches)</option> <option value="694249">Cole Carrigg (1,375 pitches)</option> <option value="702284">Cole Young (2,328 pitches)</option> <option value="695657">Colson Montgomery (2,369 pitches)</option> <option value="690993">Colt Keith (1,560 pitches)</option> <option value="681297">Colton Cowser (1,592 pitches)</option> <option value="681393">Connor Norby (1,433 pitches)</option> <option value="806198">Cooper Pratt (1,024 pitches)</option> <option value="682998">Corbin Carroll (2,574 pitches)</option> <option value="608369">Corey Seager (1,576 pitches)</option> <option value="678554">Curtis Mead (1,367 pitches)</option> <option value="667472">Dane Myers (1,292 pitches)</option> <option value="682177">Daniel Schneemann (1,098 pitches)</option> <option value="621020">Dansby Swanson (1,826 pitches)</option> <option value="662139">Daulton Varsho (1,918 pitches)</option> <option value="666152">David Hamilton (1,450 pitches)</option> <option value="695734">Daylen Lile (2,312 pitches)</option> <option value="694203">Denzer Guzman (1,076 pitches)</option> <option value="693307">Dillon Dingler (2,264 pitches)</option> <option value="686527">Dominic Canzone (1,925 pitches)</option> <option value="642086">Dominic Smith (1,124 pitches)</option> <option value="686948">Drake Baldwin (2,317 pitches)</option> <option value="687551">Drew Gilbert (1,509 pitches)</option> <option value="687637">Dylan Beavers (1,459 pitches)</option> <option value="686611">Dylan Crews (1,570 pitches)</option> <option value="666397">Edouard Julien (1,067 pitches)</option> <option value="682829">Elly De La Cruz (2,539 pitches)</option> <option value="676391">Ernie Clement (1,840 pitches)</option> <option value="699013">Esmerlyn Valdez (1,211 pitches)</option> <option value="553993">Eugenio Suárez (1,990 pitches)</option> <option value="694497">Evan Carter (1,739 pitches)</option> <option value="677649">Ezequiel Duran (2,251 pitches)</option> <option value="678662">Ezequiel Tovar (1,772 pitches)</option> <option value="665487">Fernando Tatis Jr.&nbsp;(2,474 pitches)</option> <option value="682626">Francisco Alvarez (1,678 pitches)</option> <option value="596019">Francisco Lindor (1,899 pitches)</option> <option value="518692">Freddie Freeman (2,664 pitches)</option> <option value="672515">Gabriel Moreno (2,304 pitches)</option> <option value="669003">Garrett Mitchell (2,087 pitches)</option> <option value="596142">Gary Sánchez (1,097 pitches)</option> <option value="657757">Gavin Sheets (1,774 pitches)</option> <option value="543807">George Springer (1,988 pitches)</option> <option value="672695">Geraldo Perdomo (2,769 pitches)</option> <option value="650402">Gleyber Torres (1,718 pitches)</option> <option value="665052">Griffin Conine (1,191 pitches)</option> <option value="683002">Gunnar Henderson (2,726 pitches)</option> <option value="701678">Hao-Yu Lee (1,319 pitches)</option> <option value="671218">Heliot Ramos (1,679 pitches)</option> <option value="703607">Henry Bolte (1,677 pitches)</option> <option value="680779">Henry Davis (1,081 pitches)</option> <option value="681715">Heriberto Hernández (1,951 pitches)</option> <option value="696100">Hunter Goodman (2,079 pitches)</option> <option value="664023">Ian Happ (2,654 pitches)</option> <option value="545121">Ildemaro Vargas (1,610 pitches)</option> <option value="686555">Isaac Collins (1,993 pitches)</option> <option value="670623">Isaac Paredes (2,868 pitches)</option> <option value="671056">Iván Herrera (2,831 pitches)</option> <option value="641487">J.P. Crawford (1,994 pitches)</option> <option value="592663">J.T. Realmuto (1,810 pitches)</option> <option value="668709">JJ Bleday (2,048 pitches)</option> <option value="802139">JJ Wetherholt (2,395 pitches)</option> <option value="695506">Jac Caglianone (1,919 pitches)</option> <option value="694192">Jackson Chourio (2,124 pitches)</option> <option value="702616">Jackson Holliday (1,287 pitches)</option> <option value="701538">Jackson Merrill (2,443 pitches)</option> <option value="805779">Jacob Wilson (1,103 pitches)</option> <option value="696285">Jacob Young (1,685 pitches)</option> <option value="641343">Jake Bauers (2,313 pitches)</option> <option value="669394">Jake Burger (2,297 pitches)</option> <option value="630105">Jake Cronenworth (1,686 pitches)</option> <option value="663968">Jake Mangum (1,649 pitches)</option> <option value="664983">Jake McCarthy (1,849 pitches)</option> <option value="805300">Jakob Marsee (2,255 pitches)</option> <option value="695578">James Wood (2,540 pitches)</option> <option value="669707">Jared Triolo (1,312 pitches)</option> <option value="676724">Jared Young (1,266 pitches)</option> <option value="680776">Jarren Duran (2,147 pitches)</option> <option value="691594">Javier Sanoja (1,554 pitches)</option> <option value="665862">Jazz Chisholm Jr.&nbsp;(2,084 pitches)</option> <option value="643446">Jeff McNeil (1,727 pitches)</option> <option value="669236">Jeremiah Jackson (1,003 pitches)</option> <option value="665161">Jeremy Peña (1,742 pitches)</option> <option value="660821">Jesús Sánchez (1,152 pitches)</option> <option value="666176">Jo Adell (2,470 pitches)</option> <option value="592626">Joc Pederson (1,699 pitches)</option> <option value="691788">Joe Mack (1,241 pitches)</option> <option value="687401">Joey Ortiz (1,535 pitches)</option> <option value="641680">Jonah Heim (1,394 pitches)</option> <option value="666018">Jonathan Aranda (2,609 pitches)</option> <option value="676356">Jonny DeLuca (1,302 pitches)</option> <option value="678391">Jorbit Vivas (1,252 pitches)</option> <option value="691023">Jordan Walker (2,343 pitches)</option> <option value="624585">Jorge Soler (1,386 pitches)</option> <option value="514888">Jose Altuve (1,949 pitches)</option> <option value="605137">Josh Bell (2,460 pitches)</option> <option value="673962">Josh Jung (1,558 pitches)</option> <option value="666139">Josh Lowe (1,390 pitches)</option> <option value="647304">Josh Naylor (2,080 pitches)</option> <option value="676609">José Caballero (1,753 pitches)</option> <option value="665877">José Fermín (1,474 pitches)</option> <option value="608070">José Ramírez (2,147 pitches)</option> <option value="677588">José Tena (1,088 pitches)</option> <option value="665742">Juan Soto (1,842 pitches)</option> <option value="677594">Julio Rodríguez (2,350 pitches)</option> <option value="808982">Jung Hoo Lee (2,042 pitches)</option> <option value="691406">Junior Caminero (2,610 pitches)</option> <option value="702222">Justin Crawford (1,599 pitches)</option> <option value="672960">Kazuma Okamoto (2,575 pitches)</option> <option value="660688">Keibert Ruiz (1,095 pitches)</option> <option value="606466">Ketel Marte (2,218 pitches)</option> <option value="805808">Kevin McGonigle (2,737 pitches)</option> <option value="665019">Kody Clemens (2,184 pitches)</option> <option value="804606">Konnor Griffin (1,261 pitches)</option> <option value="664728">Kyle Isbel (1,064 pitches)</option> <option value="691720">Kyle Karros (1,810 pitches)</option> <option value="700932">Kyle Manzardo (1,392 pitches)</option> <option value="656941">Kyle Schwarber (2,924 pitches)</option> <option value="669065">Kyle Stowers (1,866 pitches)</option> <option value="663656">Kyle Tucker (2,389 pitches)</option> <option value="657041">Lane Thomas (1,478 pitches)</option> <option value="663457">Lars Nootbaar (1,319 pitches)</option> <option value="671732">Lawrence Butler (2,140 pitches)</option> <option value="665750">Leody Taveras (1,751 pitches)</option> <option value="689414">Liam Hicks (1,984 pitches)</option> <option value="650333">Luis Arraez (2,347 pitches)</option> <option value="671277">Luis García Jr.&nbsp;(1,922 pitches)</option> <option value="650859">Luis Rengifo (1,312 pitches)</option> <option value="620443">Luis Torrens (1,065 pitches)</option> <option value="807712">Luke Keaschall (2,228 pitches)</option> <option value="670042">Luke Raley (1,063 pitches)</option> <option value="672580">Maikel Garcia (1,254 pitches)</option> <option value="592518">Manny Machado (2,613 pitches)</option> <option value="542303">Marcell Ozuna (1,193 pitches)</option> <option value="543760">Marcus Semien (1,998 pitches)</option> <option value="668901">Mark Vientos (1,038 pitches)</option> <option value="807799">Masataka Yoshida (1,024 pitches)</option> <option value="691026">Masyn Winn (2,071 pitches)</option> <option value="656305">Matt Chapman (1,363 pitches)</option> <option value="680574">Matt McLain (1,918 pitches)</option> <option value="621566">Matt Olson (2,823 pitches)</option> <option value="663837">Matt Vierling (1,032 pitches)</option> <option value="643289">Mauricio Dubón (2,203 pitches)</option> <option value="571970">Max Muncy (2,227 pitches)</option> <option value="691777">Max Muncy (1,066 pitches)</option> <option value="683737">Michael Busch (2,721 pitches)</option> <option value="624424">Michael Conforto (1,177 pitches)</option> <option value="671739">Michael Harris II (2,087 pitches)</option> <option value="686681">Michael Massey (1,577 pitches)</option> <option value="666160">Mickey Moniak (1,460 pitches)</option> <option value="678246">Miguel Vargas (2,701 pitches)</option> <option value="545361">Mike Trout (2,637 pitches)</option> <option value="573262">Mike Yastrzemski (1,674 pitches)</option> <option value="694208">Moisés Ballesteros (1,318 pitches)</option> <option value="605141">Mookie Betts (1,889 pitches)</option> <option value="808959">Munetaka Murakami (2,353 pitches)</option> <option value="664702">Myles Straw (1,219 pitches)</option> <option value="683083">Nasim Nuñez (1,881 pitches)</option> <option value="701675">Nathan Church (1,673 pitches)</option> <option value="664770">Nathan Lukes (1,682 pitches)</option> <option value="663993">Nathaniel Lowe (1,691 pitches)</option> <option value="663743">Nick Fortes (1,085 pitches)</option> <option value="693304">Nick Gonzales (2,141 pitches)</option> <option value="701762">Nick Kurtz (1,798 pitches)</option> <option value="679845">Nick Loftin (1,537 pitches)</option> <option value="686765">Nick Sogard (1,089 pitches)</option> <option value="663538">Nico Hoerner (2,361 pitches)</option> <option value="571448">Nolan Arenado (2,307 pitches)</option> <option value="669357">Nolan Gorman (1,205 pitches)</option> <option value="694384">Nolan Schanuel (1,622 pitches)</option> <option value="665833">Oneil Cruz (1,703 pitches)</option> <option value="672724">Oswald Peraza (1,350 pitches)</option> <option value="672640">Otto Lopez (2,438 pitches)</option> <option value="683357">Owen Caissie (1,309 pitches)</option> <option value="645277">Ozzie Albies (2,441 pitches)</option> <option value="672275">Patrick Bailey (1,297 pitches)</option> <option value="502671">Paul Goldschmidt (1,463 pitches)</option> <option value="624413">Pete Alonso (2,812 pitches)</option> <option value="691718">Pete Crow-Armstrong (2,782 pitches)</option> <option value="646240">Rafael Devers (2,527 pitches)</option> <option value="668227">Randy Arozarena (2,654 pitches)</option> <option value="656555">Rhys Hoskins (1,286 pitches)</option> <option value="680700">Richie Palacios (1,447 pitches)</option> <option value="682985">Riley Greene (2,391 pitches)</option> <option value="660670">Ronald Acuña Jr.&nbsp;(1,826 pitches)</option> <option value="668904">Royce Lewis (1,918 pitches)</option> <option value="680777">Ryan Jeffers (1,470 pitches)</option> <option value="641857">Ryan McMahon (1,432 pitches)</option> <option value="656811">Ryan O’Hearn (1,690 pitches)</option> <option value="668723">Ryan Vilade (1,055 pitches)</option> <option value="814439">Ryan Waldschmidt (1,063 pitches)</option> <option value="686217">Sal Frelick (1,389 pitches)</option> <option value="701398">Sal Stewart (2,670 pitches)</option> <option value="521692">Salvador Perez (2,265 pitches)</option> <option value="803011">Sam Antonacci (2,100 pitches)</option> <option value="694212">Samuel Basallo (1,414 pitches)</option> <option value="673548">Seiya Suzuki (2,660 pitches)</option> <option value="669127">Shea Langeliers (1,753 pitches)</option> <option value="660271">Shohei Ohtani (2,305 pitches)</option> <option value="687462">Spencer Horwitz (1,740 pitches)</option> <option value="682987">Spencer Jones (1,200 pitches)</option> <option value="668715">Spencer Steer (1,446 pitches)</option> <option value="679529">Spencer Torkelson (2,519 pitches)</option> <option value="680757">Steven Kwan (2,556 pitches)</option> <option value="681198">TJ Rumfield (2,296 pitches)</option> <option value="666211">Taylor Trammell (1,054 pitches)</option> <option value="670764">Taylor Walls (1,593 pitches)</option> <option value="621493">Taylor Ward (2,468 pitches)</option> <option value="606192">Teoscar Hernández (1,893 pitches)</option> <option value="694374">Tim Tawa (1,317 pitches)</option> <option value="669242">Tommy Edman (1,165 pitches)</option> <option value="683953">Travis Bazzana (2,010 pitches)</option> <option value="607208">Trea Turner (2,578 pitches)</option> <option value="663757">Trent Grisham (1,899 pitches)</option> <option value="663616">Trevor Larnach (1,651 pitches)</option> <option value="671976">Tristan Peters (1,660 pitches)</option> <option value="687859">Troy Johnston (1,541 pitches)</option> <option value="664034">Ty France (1,933 pitches)</option> <option value="641933">Tyler O’Neill (1,006 pitches)</option> <option value="691016">Tyler Soderstrom (1,684 pitches)</option> <option value="663886">Tyler Stephenson (1,837 pitches)</option> <option value="687093">Vaughn Grissom (1,718 pitches)</option> <option value="605170">Victor Caratini (1,375 pitches)</option> <option value="686469">Vinnie Pasquantino (1,843 pitches)</option> <option value="665489">Vladimir Guerrero Jr.&nbsp;(2,121 pitches)</option> <option value="685133">Wade Meckler (1,174 pitches)</option> <option value="669257">Will Smith (1,138 pitches)</option> <option value="650489">Willi Castro (1,827 pitches)</option> <option value="661388">William Contreras (2,211 pitches)</option> <option value="575929">Willson Contreras (2,013 pitches)</option> <option value="642715">Willy Adames (1,894 pitches)</option> <option value="677800">Wilyer Abreu (2,658 pitches)</option> <option value="694671">Wyatt Langford (1,836 pitches)</option> <option value="593428">Xander Bogaerts (2,298 pitches)</option> <option value="669364">Xavier Edwards (2,224 pitches)</option> <option value="673237">Yainer Diaz (1,125 pitches)</option> <option value="650490">Yandy Díaz (2,490 pitches)</option> <option value="670541" selected="">Yordan Alvarez (2,557 pitches)</option> <option value="656716">Zach McKinstry (1,535 pitches)</option> <option value="687263">Zach Neto (2,719 pitches)</option> <option value="680869">Zack Gelof (1,618 pitches)</option> </select>
+</div>
+<p><img id="card" class="card-img" src="cards/670541.png" alt="Heat map for Yordan Alvarez"></p>
+</div>
+<script>
+(function () {
+  const picker = document.getElementById("picker");
+  const card = document.getElementById("card");
+  function show(id) {
+    const option = picker.querySelector('option[value="' + id + '"]');
+    if (!option) return;
+    picker.value = id;
+    card.src = "cards/" + id + ".png";
+    card.alt = "Heat map for " + option.textContent;
+  }
+  picker.addEventListener("change", function () {
+    show(picker.value);
+    history.replaceState(null, "", "#" + picker.value);
+  });
+  if (location.hash.length > 1) show(location.hash.slice(1));
+})();
+</script>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/julienmiron\.github\.io\/vlc-baseball\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Data: Baseball Savant (MLB Advanced Media). Independent site, not affiliated with Major League Baseball.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
